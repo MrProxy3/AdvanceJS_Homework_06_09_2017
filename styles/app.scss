@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: url("/img/518079-background-hd.jpg");
+  background-size: cover;
+  font: normal 25px sans-serif;
+}
+
+.content {
+  width: 800px;
+  margin: 0 auto;
+
+  .label {
+    color: #fff;
+    margin-left: 15px;
+    text-transform: uppercase;
+  }
+
+  #title, #desc {
+    display: block;
+    margin: 10px 0 25px;
+    width: 100%;
+    min-height: 50px;
+    border: transparent;
+    border-right: 2px solid #f4b400;
+    border-left: 5px solid #f4b400;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, .05);
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  #desc {
+    resize: none;
+  }
+
+  .formBtn {
+    position: relative;
+    margin-bottom: 50px;
+    background: rgba(67, 134, 252, .3);
+    height: 50px;
+    width: 100px;
+    border: transparent;
+    border-left: 5px solid #4386fc;
+    border-right: 2px solid #4386fc;
+    color: #fff;
+    font: normal 25px sans-serif;
+    border-radius: 4px;
+    transition: .5s;
+
+    &:hover {
+      width: 250px;
+      background: rgba(67, 134, 252, .45);
+    }
+
+    &:active {
+      background: rgba(67, 134, 252, .6);
+    }
+
+    .movingLine {
+      position: absolute;
+      left: 1px;
+      top: 0;
+      width: 99%;
+      height: 1px;
+      background: rgba(255,255,255, .1);
+      animation-timing-function: linear;
+      animation-name: line;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes line {
+      from {top: 0;}
+      to {top: 99%;}
+    }
+
+    .secondLine {
+      position: absolute;
+      left: 1px;
+      top: 0;
+      width: 99%;
+      height: 1px;
+      background: rgba(255,255,255, .05);
+      animation-timing-function: linear;
+      animation-name: secondLine;
+      animation-duration: 1.78s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes secondLine {
+      from {top: 0;}
+      to {top: 99%;}
+    }
+  }
+
+  #out {
+    width: 100%;
+    max-width: 100%;
+    background: rgba(206, 205, 203, .1);
+    border-left: 5px solid rgba(206, 205, 203, 0.8);
+    border-right: 2px solid rgba(206, 205, 203, 0.8);
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+
+    .header {
+      background: rgba(206, 205, 203, .3);
+    }
+
+    td {
+      font-size: 20px;
+    }
+
+    td:last-child {
+      width: 20%;
+    }
+
+    & button {
+      width: 40px;
+      height: 30px;
+      margin-right: 5px;
+      font-size: 18px;
+      background: rgba(222, 236, 252, 0.3);
+      border:transparent;
+      border-left: 3px solid #CECDCB;
+      border-right: 1px solid #CECDCB;
+      border-radius: 2px;
+
+      &:hover {
+        background: rgba(222, 236, 252, 0.45);
+      }
+
+      &:active {
+        background: rgba(146, 159, 175, 0.6);
+      }
+    }
+  }
+}
+

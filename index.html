@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
+    <title>JS. AJAX. ToDo</title>
+</head>
+<body>
+
+<div class="content">
+    <form action="/api/todo" method="post" name="createTodo">
+
+        <input type="hidden" name="id">
+
+        <label for="title" class="label"> Name of your task</label>
+        <input type="text" name="title" id="title" required>
+
+        <label for="desc" class="label">Describe your task</label>
+        <textarea name="desc" id="desc" cols="30" rows="5"></textarea>
+
+        <button name="formBtn" class="formBtn">
+            Create
+            <div class="movingLine"></div>
+            <span class="secondLine"></span>
+        </button>
+    </form>
+
+    <table id="out">
+        <tr class="header">
+            <th>Title</th>
+            <th>Description</th>
+            <th>Options</th>
+        </tr>
+    </table>
+</div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
